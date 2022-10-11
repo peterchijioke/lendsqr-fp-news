@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">368879747942-8df76scm7horfgo3l1esoqp5vfgsv2fg.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">368879747942</string>
+    <string name="google_api_key" translatable="false">AIzaSyDQg1lgGinAThHAvKvfamqeJES9IeEBzsw</string>
+    <string name="google_app_id" translatable="false">1:368879747942:android:7892473c7b4b1fdb4ffea7</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDQg1lgGinAThHAvKvfamqeJES9IeEBzsw</string>
+    <string name="google_storage_bucket" translatable="false">lendsqr-fp-news-19824.appspot.com</string>
+    <string name="project_id" translatable="false">lendsqr-fp-news-19824</string>
+</resources>

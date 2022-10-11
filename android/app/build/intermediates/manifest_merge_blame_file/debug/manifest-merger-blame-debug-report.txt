@@ -1,0 +1,401 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.fp_news"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[com.facebook.flipper:flipper:0.125.0] /Users/peterchukwu/.gradle/caches/transforms-3/a2103f10e46aa861384522e5298b81c7/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.125.0] /Users/peterchukwu/.gradle/caches/transforms-3/a2103f10e46aa861384522e5298b81c7/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:22-73
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+14-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
+15-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-76
+16    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+16-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:26:5-77
+16-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:26:22-74
+17    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+17-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:29:5-82
+17-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:29:22-79
+18
+19    <application
+19-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:6:5-25:19
+20        android:name="com.fp_news.MainApplication"
+20-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:7:7-38
+21        android:allowBackup="false"
+21-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:11:7-34
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.7.0] /Users/peterchukwu/.gradle/caches/transforms-3/b329ec13dd2d1ce772c4aebe1e04c1e8/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:9:7-41
+25        android:label="@string/app_name"
+25-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:8:7-39
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:10:7-52
+27        android:theme="@style/AppTheme"
+27-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:12:7-38
+28        android:usesCleartextTraffic="true" >
+28-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/debug/AndroidManifest.xml:8:9-44
+29        <activity
+29-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/debug/AndroidManifest.xml:11:9-111
+30            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+30-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/debug/AndroidManifest.xml:11:19-83
+31            android:exported="false" />
+31-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/debug/AndroidManifest.xml:11:84-108
+32        <activity
+32-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:13:7-24:18
+33            android:name="com.fp_news.MainActivity"
+33-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:14:9-37
+34            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+34-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:16:9-118
+35            android:exported="true"
+35-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:19:9-32
+36            android:label="@string/app_name"
+36-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:15:9-41
+37            android:launchMode="singleTask"
+37-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:17:9-40
+38            android:windowSoftInputMode="adjustResize" >
+38-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:18:9-51
+39            <intent-filter>
+39-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:20:9-23:25
+40                <action android:name="android.intent.action.MAIN" />
+40-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:21:13-65
+40-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:21:21-62
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:22:13-73
+42-->/Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/android/app/src/main/AndroidManifest.xml:22:23-70
+43            </intent-filter>
+44        </activity>
+45
+46        <service
+46-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-16:40
+47            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService"
+47-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-103
+48            android:exported="false" />
+48-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-37
+49        <service
+49-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:9-23:19
+50            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
+50-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-95
+51            android:exported="false" >
+51-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-37
+52            <intent-filter>
+52-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-22:29
+53                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+53-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-78
+53-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:25-75
+54            </intent-filter>
+55        </service>
+56
+57        <receiver
+57-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-32:20
+58            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
+58-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-96
+59            android:exported="true"
+59-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-36
+60            android:permission="com.google.android.c2dm.permission.SEND" >
+60-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-73
+61            <intent-filter>
+61-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-31:29
+62                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+62-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:17-81
+62-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:25-78
+63            </intent-filter>
+64        </receiver>
+65
+66        <meta-data
+66-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-36:37
+67            android:name="firebase_messaging_auto_init_enabled"
+67-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-64
+68            android:value="false" />
+68-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-34
+69        <meta-data
+69-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:9-39:32
+70            android:name="com.google.firebase.messaging.default_notification_channel_id"
+70-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-89
+71            android:value="" />
+71-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-29
+72        <meta-data
+72-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:9-42:49
+73            android:name="com.google.firebase.messaging.default_notification_color"
+73-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:41:13-84
+74            android:resource="@color/hotpink" />
+74-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-46
+75        <meta-data
+75-->[:@react-native-firebase_perf] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/perf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:37
+76            android:name="firebase_performance_collection_enabled"
+76-->[:@react-native-firebase_perf] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/perf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-67
+77            android:value="false" />
+77-->[:@react-native-firebase_perf] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/perf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-34
+78        <meta-data
+78-->[:@react-native-firebase_perf] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/perf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:9-15:37
+79            android:name="firebase_performance_collection_deactivated"
+79-->[:@react-native-firebase_perf] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/perf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-71
+80            android:value="false" /> <!-- Disable crashlytics by default so we can custom init with CrashlyticsNdk support -->
+80-->[:@react-native-firebase_perf] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/perf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-34
+81        <meta-data
+81-->[:@react-native-firebase_crashlytics] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/crashlytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-14:37
+82            android:name="firebase_crashlytics_collection_enabled"
+82-->[:@react-native-firebase_crashlytics] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/crashlytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-67
+83            android:value="false" />
+83-->[:@react-native-firebase_crashlytics] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/crashlytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-34
+84
+85        <provider
+85-->[:@react-native-firebase_crashlytics] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/crashlytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-20:38
+86            android:name="io.invertase.firebase.crashlytics.ReactNativeFirebaseCrashlyticsInitProvider"
+86-->[:@react-native-firebase_crashlytics] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/crashlytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-104
+87            android:authorities="com.fp_news.reactnativefirebasecrashlyticsinitprovider"
+87-->[:@react-native-firebase_crashlytics] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/crashlytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-94
+88            android:exported="false"
+88-->[:@react-native-firebase_crashlytics] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/crashlytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-37
+89            android:initOrder="98" />
+89-->[:@react-native-firebase_crashlytics] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/crashlytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-35
+90
+91        <meta-data
+91-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:9-13:37
+92            android:name="app_data_collection_default_enabled"
+92-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-63
+93            android:value="false" />
+93-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-34
+94
+95        <service
+95-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-23:19
+96            android:name="com.google.firebase.components.ComponentDiscoveryService"
+96-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-84
+97            android:directBootAware="true"
+97-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-43
+98            android:exported="false" >
+98-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+99            <meta-data
+99-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-22:85
+100                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+100-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-120
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-82
+102            <meta-data
+102-->[com.google.firebase:firebase-perf:20.1.1] /Users/peterchukwu/.gradle/caches/transforms-3/ee60edba4245ba88c5a4f97affb8d52e/transformed/jetified-firebase-perf-20.1.1/AndroidManifest.xml:23:13-25:85
+103                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+103-->[com.google.firebase:firebase-perf:20.1.1] /Users/peterchukwu/.gradle/caches/transforms-3/ee60edba4245ba88c5a4f97affb8d52e/transformed/jetified-firebase-perf-20.1.1/AndroidManifest.xml:24:17-109
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[com.google.firebase:firebase-perf:20.1.1] /Users/peterchukwu/.gradle/caches/transforms-3/ee60edba4245ba88c5a4f97affb8d52e/transformed/jetified-firebase-perf-20.1.1/AndroidManifest.xml:25:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:56:13-58:85
+106                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+106-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:57:17-119
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:58:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-crashlytics-ndk:18.2.13] /Users/peterchukwu/.gradle/caches/transforms-3/ae8389451791e89cd98104abbec2443f/transformed/jetified-firebase-crashlytics-ndk-18.2.13/AndroidManifest.xml:35:13-37:85
+109                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar"
+109-->[com.google.firebase:firebase-crashlytics-ndk:18.2.13] /Users/peterchukwu/.gradle/caches/transforms-3/ae8389451791e89cd98104abbec2443f/transformed/jetified-firebase-crashlytics-ndk-18.2.13/AndroidManifest.xml:36:17-122
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-crashlytics-ndk:18.2.13] /Users/peterchukwu/.gradle/caches/transforms-3/ae8389451791e89cd98104abbec2443f/transformed/jetified-firebase-crashlytics-ndk-18.2.13/AndroidManifest.xml:37:17-82
+111            <meta-data
+111-->[com.google.firebase:firebase-crashlytics:18.2.13] /Users/peterchukwu/.gradle/caches/transforms-3/d2722df619d3c90261355db13035a469/transformed/jetified-firebase-crashlytics-18.2.13/AndroidManifest.xml:18:13-20:85
+112                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+112-->[com.google.firebase:firebase-crashlytics:18.2.13] /Users/peterchukwu/.gradle/caches/transforms-3/d2722df619d3c90261355db13035a469/transformed/jetified-firebase-crashlytics-18.2.13/AndroidManifest.xml:19:17-115
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.firebase:firebase-crashlytics:18.2.13] /Users/peterchukwu/.gradle/caches/transforms-3/d2722df619d3c90261355db13035a469/transformed/jetified-firebase-crashlytics-18.2.13/AndroidManifest.xml:20:17-82
+114            <meta-data
+114-->[com.google.firebase:firebase-datatransport:18.1.6] /Users/peterchukwu/.gradle/caches/transforms-3/de315eeeab4410055b859be396805a7a/transformed/jetified-firebase-datatransport-18.1.6/AndroidManifest.xml:28:13-30:85
+115                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+115-->[com.google.firebase:firebase-datatransport:18.1.6] /Users/peterchukwu/.gradle/caches/transforms-3/de315eeeab4410055b859be396805a7a/transformed/jetified-firebase-datatransport-18.1.6/AndroidManifest.xml:29:17-115
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-datatransport:18.1.6] /Users/peterchukwu/.gradle/caches/transforms-3/de315eeeab4410055b859be396805a7a/transformed/jetified-firebase-datatransport-18.1.6/AndroidManifest.xml:30:17-82
+117            <meta-data
+117-->[com.google.firebase:firebase-config:21.1.2] /Users/peterchukwu/.gradle/caches/transforms-3/ed03ca4d2a4a6fbbfda31bea8b67bae8/transformed/jetified-firebase-config-21.1.2/AndroidManifest.xml:32:13-34:85
+118                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+118-->[com.google.firebase:firebase-config:21.1.2] /Users/peterchukwu/.gradle/caches/transforms-3/ed03ca4d2a4a6fbbfda31bea8b67bae8/transformed/jetified-firebase-config-21.1.2/AndroidManifest.xml:33:17-117
+119                android:value="com.google.firebase.components.ComponentRegistrar" />
+119-->[com.google.firebase:firebase-config:21.1.2] /Users/peterchukwu/.gradle/caches/transforms-3/ed03ca4d2a4a6fbbfda31bea8b67bae8/transformed/jetified-firebase-config-21.1.2/AndroidManifest.xml:34:17-82
+120            <meta-data
+120-->[com.google.firebase:firebase-installations:17.0.3] /Users/peterchukwu/.gradle/caches/transforms-3/930129fbeb73529be058af82b0e63cbc/transformed/jetified-firebase-installations-17.0.3/AndroidManifest.xml:18:13-20:85
+121                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+121-->[com.google.firebase:firebase-installations:17.0.3] /Users/peterchukwu/.gradle/caches/transforms-3/930129fbeb73529be058af82b0e63cbc/transformed/jetified-firebase-installations-17.0.3/AndroidManifest.xml:19:17-127
+122                android:value="com.google.firebase.components.ComponentRegistrar" />
+122-->[com.google.firebase:firebase-installations:17.0.3] /Users/peterchukwu/.gradle/caches/transforms-3/930129fbeb73529be058af82b0e63cbc/transformed/jetified-firebase-installations-17.0.3/AndroidManifest.xml:20:17-82
+123            <meta-data
+123-->[com.google.firebase:firebase-abt:21.0.2] /Users/peterchukwu/.gradle/caches/transforms-3/d44aacb8bf484bcfcdb1a521a534711d/transformed/jetified-firebase-abt-21.0.2/AndroidManifest.xml:13:13-15:85
+124                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+124-->[com.google.firebase:firebase-abt:21.0.2] /Users/peterchukwu/.gradle/caches/transforms-3/d44aacb8bf484bcfcdb1a521a534711d/transformed/jetified-firebase-abt-21.0.2/AndroidManifest.xml:14:17-109
+125                android:value="com.google.firebase.components.ComponentRegistrar" />
+125-->[com.google.firebase:firebase-abt:21.0.2] /Users/peterchukwu/.gradle/caches/transforms-3/d44aacb8bf484bcfcdb1a521a534711d/transformed/jetified-firebase-abt-21.0.2/AndroidManifest.xml:15:17-82
+126        </service>
+127
+128        <provider
+128-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-29:38
+129            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+129-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-88
+130            android:authorities="com.fp_news.reactnativefirebaseappinitprovider"
+130-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-86
+131            android:exported="false"
+131-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-37
+132            android:initOrder="99" />
+132-->[:@react-native-firebase_app] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-35
+133        <provider
+133-->[com.google.firebase:firebase-perf:20.1.1] /Users/peterchukwu/.gradle/caches/transforms-3/ee60edba4245ba88c5a4f97affb8d52e/transformed/jetified-firebase-perf-20.1.1/AndroidManifest.xml:14:9-18:39
+134            android:name="com.google.firebase.perf.provider.FirebasePerfProvider"
+134-->[com.google.firebase:firebase-perf:20.1.1] /Users/peterchukwu/.gradle/caches/transforms-3/ee60edba4245ba88c5a4f97affb8d52e/transformed/jetified-firebase-perf-20.1.1/AndroidManifest.xml:15:13-82
+135            android:authorities="com.fp_news.firebaseperfprovider"
+135-->[com.google.firebase:firebase-perf:20.1.1] /Users/peterchukwu/.gradle/caches/transforms-3/ee60edba4245ba88c5a4f97affb8d52e/transformed/jetified-firebase-perf-20.1.1/AndroidManifest.xml:16:13-72
+136            android:exported="false"
+136-->[com.google.firebase:firebase-perf:20.1.1] /Users/peterchukwu/.gradle/caches/transforms-3/ee60edba4245ba88c5a4f97affb8d52e/transformed/jetified-firebase-perf-20.1.1/AndroidManifest.xml:17:13-37
+137            android:initOrder="101" />
+137-->[com.google.firebase:firebase-perf:20.1.1] /Users/peterchukwu/.gradle/caches/transforms-3/ee60edba4245ba88c5a4f97affb8d52e/transformed/jetified-firebase-perf-20.1.1/AndroidManifest.xml:18:13-36
+138
+139        <receiver
+139-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:32:9-39:20
+140            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+140-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:33:13-78
+141            android:exported="true"
+141-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:34:13-36
+142            android:permission="com.google.android.c2dm.permission.SEND" >
+142-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:35:13-73
+143            <intent-filter>
+143-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-31:29
+144                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+144-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:17-81
+144-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:25-78
+145            </intent-filter>
+146        </receiver>
+147        <!--
+148             FirebaseMessagingService performs security checks at runtime,
+149             but set to not exported to explicitly avoid allowing another app to call it.
+150        -->
+151        <service
+151-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:45:9-52:19
+152            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+152-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:46:13-82
+153            android:directBootAware="true"
+153-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:47:13-43
+154            android:exported="false" >
+154-->[com.google.firebase:firebase-messaging:23.0.8] /Users/peterchukwu/.gradle/caches/transforms-3/9071a7ca244caba258d4c53aa212d275/transformed/jetified-firebase-messaging-23.0.8/AndroidManifest.xml:48:13-37
+155            <intent-filter android:priority="-500" >
+155-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-22:29
+156                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+156-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-78
+156-->[:@react-native-firebase_messaging] /Users/peterchukwu/Documents/GitHub/lendsqr-fp-news/FP_News/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:25-75
+157            </intent-filter>
+158        </service>
+159        <service
+159-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/915a05a329085ca42714d69ef91343c3/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:29:9-35:19
+160            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+160-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/915a05a329085ca42714d69ef91343c3/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:30:13-103
+161            android:exported="false" >
+161-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/915a05a329085ca42714d69ef91343c3/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:31:13-37
+162            <meta-data
+162-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/915a05a329085ca42714d69ef91343c3/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:32:13-34:39
+163                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+163-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/915a05a329085ca42714d69ef91343c3/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:33:17-94
+164                android:value="cct" />
+164-->[com.google.android.datatransport:transport-backend-cct:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/915a05a329085ca42714d69ef91343c3/transformed/jetified-transport-backend-cct-3.1.7/AndroidManifest.xml:34:17-36
+165        </service>
+166        <service
+166-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/dead5657dd2b6c9b919e6345616aab00/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:26:9-30:19
+167            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+167-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/dead5657dd2b6c9b919e6345616aab00/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:27:13-117
+168            android:exported="false"
+168-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/dead5657dd2b6c9b919e6345616aab00/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:28:13-37
+169            android:permission="android.permission.BIND_JOB_SERVICE" >
+169-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/dead5657dd2b6c9b919e6345616aab00/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:29:13-69
+170        </service>
+171
+172        <receiver
+172-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/dead5657dd2b6c9b919e6345616aab00/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:32:9-34:40
+173            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+173-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/dead5657dd2b6c9b919e6345616aab00/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:33:13-132
+174            android:exported="false" />
+174-->[com.google.android.datatransport:transport-runtime:3.1.7] /Users/peterchukwu/.gradle/caches/transforms-3/dead5657dd2b6c9b919e6345616aab00/transformed/jetified-transport-runtime-3.1.7/AndroidManifest.xml:34:13-37
+175
+176        <activity
+176-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:23:9-27:75
+177            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+177-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:24:13-93
+178            android:excludeFromRecents="true"
+178-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:25:13-46
+179            android:exported="false"
+179-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:26:13-37
+180            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+180-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:27:13-72
+181        <!--
+182            Service handling Google Sign-In user revocation. For apps that do not integrate with
+183            Google Sign-In, this service will never be started.
+184        -->
+185        <service
+185-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:33:9-37:51
+186            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+186-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:34:13-89
+187            android:exported="true"
+187-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:35:13-36
+188            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+188-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:36:13-107
+189            android:visibleToInstantApps="true" />
+189-->[com.google.android.gms:play-services-auth:20.3.0] /Users/peterchukwu/.gradle/caches/transforms-3/6b1b9fe1f4ffc3e998bc72f0e56408c6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:37:13-48
+190
+191        <activity
+191-->[com.google.android.gms:play-services-base:18.0.1] /Users/peterchukwu/.gradle/caches/transforms-3/04c5ae1ee20f83547ae3826e825d4574/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+192            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+192-->[com.google.android.gms:play-services-base:18.0.1] /Users/peterchukwu/.gradle/caches/transforms-3/04c5ae1ee20f83547ae3826e825d4574/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+193            android:exported="false"
+193-->[com.google.android.gms:play-services-base:18.0.1] /Users/peterchukwu/.gradle/caches/transforms-3/04c5ae1ee20f83547ae3826e825d4574/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+194            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+194-->[com.google.android.gms:play-services-base:18.0.1] /Users/peterchukwu/.gradle/caches/transforms-3/04c5ae1ee20f83547ae3826e825d4574/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+195
+196        <provider
+196-->[com.google.firebase:firebase-common:20.1.2] /Users/peterchukwu/.gradle/caches/transforms-3/a6ad11b96f402444829727c8b7863923/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:26:9-31:39
+197            android:name="com.google.firebase.provider.FirebaseInitProvider"
+197-->[com.google.firebase:firebase-common:20.1.2] /Users/peterchukwu/.gradle/caches/transforms-3/a6ad11b96f402444829727c8b7863923/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:27:13-77
+198            android:authorities="com.fp_news.firebaseinitprovider"
+198-->[com.google.firebase:firebase-common:20.1.2] /Users/peterchukwu/.gradle/caches/transforms-3/a6ad11b96f402444829727c8b7863923/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:28:13-72
+199            android:directBootAware="true"
+199-->[com.google.firebase:firebase-common:20.1.2] /Users/peterchukwu/.gradle/caches/transforms-3/a6ad11b96f402444829727c8b7863923/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:29:13-43
+200            android:exported="false"
+200-->[com.google.firebase:firebase-common:20.1.2] /Users/peterchukwu/.gradle/caches/transforms-3/a6ad11b96f402444829727c8b7863923/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:30:13-37
+201            android:initOrder="100" />
+201-->[com.google.firebase:firebase-common:20.1.2] /Users/peterchukwu/.gradle/caches/transforms-3/a6ad11b96f402444829727c8b7863923/transformed/jetified-firebase-common-20.1.2/AndroidManifest.xml:31:13-36
+202
+203        <meta-data
+203-->[com.google.android.gms:play-services-basement:18.1.0] /Users/peterchukwu/.gradle/caches/transforms-3/54f28f5522418672d3abc438eb85d603/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+204            android:name="com.google.android.gms.version"
+204-->[com.google.android.gms:play-services-basement:18.1.0] /Users/peterchukwu/.gradle/caches/transforms-3/54f28f5522418672d3abc438eb85d603/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+205            android:value="@integer/google_play_services_version" />
+205-->[com.google.android.gms:play-services-basement:18.1.0] /Users/peterchukwu/.gradle/caches/transforms-3/54f28f5522418672d3abc438eb85d603/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+206
+207        <provider
+207-->[androidx.emoji2:emoji2:1.0.0] /Users/peterchukwu/.gradle/caches/transforms-3/9d895e0f1dc231e6f7651aecf63a9792/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+208            android:name="androidx.startup.InitializationProvider"
+208-->[androidx.emoji2:emoji2:1.0.0] /Users/peterchukwu/.gradle/caches/transforms-3/9d895e0f1dc231e6f7651aecf63a9792/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+209            android:authorities="com.fp_news.androidx-startup"
+209-->[androidx.emoji2:emoji2:1.0.0] /Users/peterchukwu/.gradle/caches/transforms-3/9d895e0f1dc231e6f7651aecf63a9792/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+210            android:exported="false" >
+210-->[androidx.emoji2:emoji2:1.0.0] /Users/peterchukwu/.gradle/caches/transforms-3/9d895e0f1dc231e6f7651aecf63a9792/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+211            <meta-data
+211-->[androidx.emoji2:emoji2:1.0.0] /Users/peterchukwu/.gradle/caches/transforms-3/9d895e0f1dc231e6f7651aecf63a9792/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+212                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+212-->[androidx.emoji2:emoji2:1.0.0] /Users/peterchukwu/.gradle/caches/transforms-3/9d895e0f1dc231e6f7651aecf63a9792/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+213                android:value="androidx.startup" />
+213-->[androidx.emoji2:emoji2:1.0.0] /Users/peterchukwu/.gradle/caches/transforms-3/9d895e0f1dc231e6f7651aecf63a9792/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+214            <meta-data
+214-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/peterchukwu/.gradle/caches/transforms-3/93d34a760a030c14d2ef7301ded0b6c8/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+215                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+215-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/peterchukwu/.gradle/caches/transforms-3/93d34a760a030c14d2ef7301ded0b6c8/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+216                android:value="androidx.startup" />
+216-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/peterchukwu/.gradle/caches/transforms-3/93d34a760a030c14d2ef7301ded0b6c8/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+217        </provider>
+218    </application>
+219
+220</manifest>
