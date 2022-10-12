@@ -8,7 +8,6 @@ import NewsListing, { newsListingName } from "./src/screens/NewsListing";
 import NewsDetails, { newsDetailsName } from "./src/screens/NewsDetails";
 import { Provider, useDispatch } from "react-redux";
 import Store from "./src/application/Store";
-import { NEWS_LOADING } from "./src/application/actions/type/news";
 
 const Stack = createNativeStackNavigator();
 
