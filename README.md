@@ -4,6 +4,7 @@
 
 ## Table of Contents
 
+* [Installation](#Features)
 * [Installation](#Installation)
 * [Alternatively download the React Native APK Test App](#Alternatively%download%the%React%Native%APK%Test%App)
 * [Steps taken to build this app](#Steps%taken%to%build%this%app%include)
