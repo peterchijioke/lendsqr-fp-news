@@ -29,7 +29,7 @@ validateEmail = (email:string):boolean => {
 
 // store user data in storage 
 
-storeData =  async (value:any,storage_Key:string) => {
+storeData =  async (value:object) => {
   try {
     const jsonValue = JSON.stringify(value)
     // await AsyncStorage.setItem(storage_Key, jsonValue)
