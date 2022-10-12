@@ -61,16 +61,16 @@ storeData =  async (value:any,storage_Key:string) => {
         console.log(result)
   })
 
-  // try {
-  //   const value = await AsyncStorage.getItem(storage_Key)
-  //   if(value !== null) {
-  //     return JSON.parse(value)
-  //   }else{
-  //     return null
-  //   }
-  // } catch(e) {
-  //   return `error`
-  // }
+  try {
+    const value = await AsyncStorage.getItem(storage_Key)
+    if(value !== null) {
+      return JSON.parse(value)
+    }else{
+      return null
+    }
+  } catch(e) {
+    return `error`
+  }
 
 
 

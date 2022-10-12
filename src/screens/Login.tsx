@@ -211,7 +211,10 @@ const Login = ({ navigation, ...props }) => {
           >
             <Button.SignUp
               text="Login"
-              onPress={HandleLogin}
+              // onPress={HandleLogin}
+              onPress={() => {
+                helperClass.getData("userdetails");
+              }}
               style={{ padding: 10, width: "60%" }}
             />
             <AppText.Body style={{ fontSize: 14, marginTop: "2%" }}>
