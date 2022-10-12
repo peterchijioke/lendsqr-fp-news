@@ -128,4 +128,5 @@ dist
 
 ios
 android
+# config file
 Config.ts
