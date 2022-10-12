@@ -8,30 +8,51 @@ import NewsListing, { newsListingName } from "./src/screens/NewsListing";
 import NewsDetails, { newsDetailsName } from "./src/screens/NewsDetails";
 import { Provider, useDispatch } from "react-redux";
 import Store from "./src/application/Store";
-import remoteConfig from "@react-native-firebase/remote-config";
-import Crash from "@react-native-firebase/crashlytics";
+
+import analytics from "@react-native-firebase/analytics";
 
 const Stack = createNativeStackNavigator();
 
 function App() {
+  const routeNameRef: any = React.useRef();
+  const navigationRef: any = React.useRef();
   return (
     <Provider store={Store}>
-      <NavigationContainer>
+      <NavigationContainer
+        ref={navigationRef}
+        onReady={() => {
+          routeNameRef.current = navigationRef.current.getCurrentRoute().name;
+        }}
+        onStateChange={async () => {
+          const previousRouteName = routeNameRef.current;
+          const currentRouteName = navigationRef.current.getCurrentRoute().name;
+
+          if (previousRouteName !== currentRouteName) {
+            await analytics().logScreenView({
+              screen_name: currentRouteName,
+              screen_class: currentRouteName,
+            });
+          }
+          routeNameRef.current = currentRouteName;
+        }}
+      >
         <Stack.Navigator>
+          <Stack.Screen
+            options={{ title: "Login" }}
+            name={loginName}
+            component={Login}
+          />
+
           <Stack.Screen
             options={{ title: "Sign Up" }}
             name={signupName}
             component={Signup}
           />
+
           <Stack.Screen
             options={{ title: "News List" }}
             name={newsListingName}
             component={NewsListing}
-          />
-          <Stack.Screen
-            options={{ title: "Login" }}
-            name={loginName}
-            component={Login}
           />
 
           <Stack.Screen

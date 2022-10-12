@@ -29,7 +29,7 @@ validateEmail = (email:string):boolean => {
 
 // store user data in storage 
 
-storeData =  async (value:any,storage_Key:string) => {
+storeData =  async (value:object) => {
   try {
     const jsonValue = JSON.stringify(value)
     // await AsyncStorage.setItem(storage_Key, jsonValue)
@@ -40,7 +40,7 @@ storeData =  async (value:any,storage_Key:string) => {
 
     return 'saved'
   } catch (e:any) {
-     Crash().recordError(e);
+     Crash().recordError(new Error(e.message));
         console.log(e)
     return 'error'
    
@@ -48,30 +48,21 @@ storeData =  async (value:any,storage_Key:string) => {
 }
 
 
- getData = async (storage_Key:string) => {
-  remoteConfig().fetch().then(()=>remoteConfig().activate()).then((activated)=>{
-    if (activated) {
-      return remoteConfig().getValue('User')
-    }else{
-       Crash().log("No active user");
-        console.log("No active user ")
-    }
-  }).then((data)=>{
-        const result = data?.asString()
-        console.log(result)
-  })
+ getData = async (key:string) : Promise<any>=>  {
 
-  try {
-    const value = await AsyncStorage.getItem(storage_Key)
-    if(value !== null) {
-      return JSON.parse(value)
-    }else{
-      return null
-    }
-  } catch(e) {
-    return `error`
-  }
-
+ try {
+          const User: any = await remoteConfig().getValue("User");
+          console.log(User.asString());
+          if (User.asString()) {
+            return User.asString();
+          } else {
+            return null;
+          }
+        } catch (e: any) {
+          console.error(e);
+           Crash().recordError(new Error(e.message));
+           return "error";
+        }
 
 
 }

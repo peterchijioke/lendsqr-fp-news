@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Colors } from "../assets/colors/Colors";
+import remoteConfig from "@react-native-firebase/remote-config";
 import Button from "./components/button/Button";
 import AppText from "./components/text/AppText";
 import Wrapper from "./components/wrapper/Wrapper";
@@ -54,26 +55,32 @@ const Login = ({ navigation, ...props }) => {
     if (email && password) {
       const emailValidationRespons = helperClass.validateEmail(email);
       if (emailValidationRespons) {
-        let responds = await helperClass.getData("userdetails");
-        if (responds !== "error" && responds !== null) {
-          let { email: resEmail, password: resPassword } = responds;
+        try {
+          const data = await helperClass.getData("User");
+          const responds = JSON.parse(data);
 
-          // check if email & password match input
-          if (resEmail == email && resPassword == password) {
-            setTimeout(() => {
+          if (responds !== "error" || responds != null) {
+            // check if email & password match input
+            if (`${responds?.email}` === email) {
+              setTimeout(() => {
+                setLoading(false);
+                Navigation(newsListingName);
+                crashlytics().log("User loged in");
+              }, 3000);
+            } else {
               setLoading(false);
-              Navigation(newsListingName);
-              crashlytics().log("User loged in");
-            }, 3000);
+              setError("Ooops.. This user does not exist.");
+              crashlytics().log("Ooops.. This user does not exist.");
+            }
           } else {
             setLoading(false);
             setError("Ooops.. This user does not exist.");
             crashlytics().log("Ooops.. This user does not exist.");
           }
-        } else {
+        } catch (error: any) {
           setLoading(false);
-          setError("Ooops.. This user does not exist.");
-          crashlytics().log("Ooops.. This user does not exist.");
+          console.error(error);
+          crashlytics().recordError(new Error(error.message));
         }
       } else {
         setLoading(false);
@@ -100,37 +107,45 @@ const Login = ({ navigation, ...props }) => {
       }
       const { user } = await GoogleSignin.signIn();
       // const {user} = await GoogleSignin.getTokens();
-      const userDetails: object = {
-        name: user.name,
-        phone: "",
-        email: user.email,
-        provider: "google",
-        photo: user.photo,
-      };
 
       if (user?.email && user?.name) {
-        const storedUser = await helperClass.getData("userdetails");
-        if (storedUser !== "error" && storedUser !== null) {
-          let { email: storedEmail, name: storedName, provider } = storedUser;
-          if (provider == "google") {
-            setTimeout(() => {
+        try {
+          const data = await helperClass.getData("User");
+          const storedUser = JSON.parse(data);
+          if (storedUser !== "error" && storedUser !== null) {
+            let { email: storedEmail, name: storedName, provider } = storedUser;
+            if (provider === "google") {
+              if (user.name == storedName && user.email === storedEmail) {
+                setTimeout(() => {
+                  setLoading(false);
+                  Navigation(newsListingName);
+                }, 3000);
+              } else {
+                setLoading(false);
+                setError("Ooops.. Ooops.. User do not exist");
+                crashlytics().log("Ooops.. User do not exist");
+              }
+            } else {
               setLoading(false);
-              Navigation(newsListingName);
-            }, 3000);
+              setError("Ooops.. Unknown process, please try again");
+              crashlytics().log("Ooops.. Unknown process, please try again");
+            }
           } else {
             setLoading(false);
-            setError("Ooops.. Unknown process, please try again");
-            crashlytics().log("Ooops.. Unknown process, please try again");
+            setError("Ooops.. This user does not exist, please signup");
+            crashlytics().log(
+              "Ooops.. This user does not exist, please signup"
+            );
           }
-        } else {
+        } catch (error: any) {
           setLoading(false);
-          setError("Ooops.. This user does not exist, please signup");
-          crashlytics().log("Ooops.. This user does not exist, please signup");
+          console.error(error);
+          crashlytics().recordError(new Error(error.message));
         }
       }
     } catch (error: any) {
       console.log(error);
-      crashlytics().recordError(error);
+      crashlytics().recordError(new Error());
     }
   };
 
@@ -211,10 +226,7 @@ const Login = ({ navigation, ...props }) => {
           >
             <Button.SignUp
               text="Login"
-              // onPress={HandleLogin}
-              onPress={() => {
-                helperClass.getData("userdetails");
-              }}
+              onPress={HandleLogin}
               style={{ padding: 10, width: "60%" }}
             />
             <AppText.Body style={{ fontSize: 14, marginTop: "2%" }}>

@@ -27,9 +27,9 @@ import perf from '@react-native-firebase/perf';
                                         await metric.stop();
 
                                 return response
-                             } catch (error:any) {
-                            crashlytics().recordError(error);
-                            console.log(error);
+                             } catch (e:any) {
+                            crashlytics().recordError(new Error(e.message));
+                            console.log(e);
     
                              }   
                                   // return response
