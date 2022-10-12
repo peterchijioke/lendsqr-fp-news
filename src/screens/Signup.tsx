@@ -83,10 +83,7 @@ const Signup = ({ navigation, ...props }) => {
       if (toggleCheckBox) {
         const emailValidationRespons = helperClass.validateEmail(email);
         if (emailValidationRespons) {
-          let responds = await helperClass.storeData(
-            userDetails,
-            "userdetails"
-          );
+          let responds = await helperClass.storeData(userDetails);
           if (responds == "saved") {
             setTimeout(() => {
               setLoading(false);
@@ -137,7 +134,7 @@ const Signup = ({ navigation, ...props }) => {
           provider: "google",
           photo: user.photo,
         };
-        let responds = await helperClass.storeData(userDetails, "userdetails");
+        let responds = await helperClass.storeData(userDetails);
         if (responds == "saved") {
           setTimeout(() => {
             setLoading(false);

@@ -100,13 +100,6 @@ const Login = ({ navigation, ...props }) => {
       }
       const { user } = await GoogleSignin.signIn();
       // const {user} = await GoogleSignin.getTokens();
-      const userDetails: object = {
-        name: user.name,
-        phone: "",
-        email: user.email,
-        provider: "google",
-        photo: user.photo,
-      };
 
       if (user?.email && user?.name) {
         const storedUser = await helperClass.getData("User");
