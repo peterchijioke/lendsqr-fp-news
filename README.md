@@ -49,7 +49,18 @@ yarn android
 - Install redux-tookit, note that redux-toolkit is dependent on react-redux, so you must install both; You can run this command to install both ```npm install @reduxjs/toolkit react-redux```
 - Set up redux-toolkit for the state management: you can follow through the set up documentation at https://redux-toolkit.js.org/tutorials/quick-start
 - Create your Slices
-- Preload you state with array of objects : Just to let the user have somthing to feel on first render.
+- Installed ```@react-native-firebase/app``` which is the core of all other firebase packages;
+- Created a new app, adhearing to the name given
+- Setup the featured services needed.
+- installed the following react-native firebase dependencied using yarn: 
+- ```@react-native-firebase/crashlytics```,
+- ```@react-native-firebase/perf```, 
+- ```@react-native-firebase/analytics```, 
+- ```@react-native-firebase/remote-config```, 
+- ```@react-native-firebase/messaging```
+-  Then setup the platform code in the react-native project. 
+-  I installed also react-navigation, which is basicaly used for routing and navigation to and from a screen
+-  The last package was ```react-native-codepush```, which is plugin that provides client-side integration for the CodePush service in react-native
 
 ## Tech Stack
 
