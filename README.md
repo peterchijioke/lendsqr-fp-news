@@ -4,12 +4,11 @@
 
 ## Table of Contents
 
-* [Installation](#Features)
+* [Features](#Features)
 * [Installation](#Installation)
 * [Alternatively download the React Native APK Test App](#Alternatively%download%the%React%Native%APK%Test%App)
 * [Steps taken to build this app](#Steps%taken%to%build%this%app%include)
 * [Tech Stack](#Tech%Stack)
-* [Features](#Features)
 * [Screenshots](#Screenshots)
 
 
@@ -45,7 +44,7 @@ yarn android
 - [Android APK: ](https://appdistribution.firebase.google.com/testerapps/null/releases/1qlef3miuvn60)
 
 ## Steps taken to build this app include:
-- Create a react native application using ```npx react-native init crud-app```
+- Create a react native application using ```npx react-native init FP_News```
 - Install redux-tookit, note that redux-toolkit is dependent on react-redux, so you must install both; You can run this command to install both ```npm install @reduxjs/toolkit react-redux```
 - Set up redux-toolkit for the state management: you can follow through the set up documentation at https://redux-toolkit.js.org/tutorials/quick-start
 - Create your Slices
