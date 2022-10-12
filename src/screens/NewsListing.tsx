@@ -20,9 +20,11 @@ const NewsListing = ({ navigation }) => {
   const allNews = useSelector(getAllNews);
   const loading = useSelector(getNewsLoading);
   const helperClass = new Helper();
+
   let Navigation = (screenName: any): void => {
     navigation.navigate(`${screenName}`);
   };
+
   useEffect(() => {
     dispatch(NEWS_LOAD(true));
   }, [dispatch]);
@@ -83,13 +85,7 @@ const NewsListing = ({ navigation }) => {
           marginTop: "2%",
         }}
       >
-        <Button
-          onPress={() => {
-            let n: any = 1;
-            n.toUpperCase();
-          }}
-          style={{}}
-        >
+        <Button onPress={() => crashlytics().crash()} style={{}}>
           <AppText.SubTitle
             style={{ textAlign: "center", color: Colors.secondary }}
           >
