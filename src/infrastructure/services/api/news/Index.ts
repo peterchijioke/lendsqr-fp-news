@@ -11,10 +11,8 @@ import  Config from "../../../../../Config";
                                   console.log(response.json())
                              } catch (error) {
                               console.log(error)
-                             }
-                                  
+                             }   
                                   // return response
-
              }
 
 
