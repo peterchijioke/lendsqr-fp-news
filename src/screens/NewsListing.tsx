@@ -14,6 +14,7 @@ import Button from "./components/button/Button";
 import { newsDetailsName } from "./NewsDetails";
 export let newsListingName = "newsListing";
 import crashlytics from "@react-native-firebase/crashlytics";
+import analytics from "@react-native-firebase/analytics";
 
 const NewsListing = ({ navigation }) => {
   const allNews = useSelector(getAllNews);
@@ -28,9 +29,9 @@ const NewsListing = ({ navigation }) => {
     // if (index == 1) {
     return (
       <Button
-        onPress={() => {
+        onPress={async () => {
           navigation.navigate(`${newsDetailsName}`, { item });
-          crashlytics().log("Moved to read a news");
+          await analytics().logEvent("Item", item);
         }}
         style={{
           elevation: 7,
