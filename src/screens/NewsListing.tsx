@@ -33,7 +33,7 @@ const NewsListing = ({ navigation }) => {
       <Button
         onPress={() => {
           navigation.navigate(`${newsDetailsName}`, { item });
-          crashlytics().log("User id ");
+          crashlytics().log("Moved to read a news");
         }}
         style={{
           elevation: 7,
