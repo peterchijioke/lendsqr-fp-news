@@ -19,49 +19,86 @@ import {
 } from "../application/selectors/news/Index";
 import { NEWS_LOAD } from "../application/reducers/news/ui";
 import { useIsFocused } from "@react-navigation/native";
+import Helper from "../partials/Helper";
+import Button from "./components/button/Button";
 export let newsListingName = "newsListing";
 
 const NewsListing = () => {
   const dispatch = useDispatch();
   const allNews = useSelector(getAllNews);
   const loading = useSelector(getNewsLoading);
-
+  const helperClass = new Helper();
   useEffect(() => {
     dispatch(NEWS_LOAD(true));
   }, [dispatch]);
 
   const ItemComponent = ({ item, index }): any => {
-    if (index == 1) {
-      return (
-        <Wrapper.Card style={{ elevation: 5 }}>
-          <View style={{ flexDirection: "row", padding: 5 }}>
-            <Wrapper
-              style={{ height: 20, width: 20, backgroundColor: "black" }}
-            ></Wrapper>
-            <AppText.Title style={{ marginLeft: 5 }}>
-              {item.topic.toUpperCase()}
-            </AppText.Title>
-          </View>
-          <Wrapper style={{ width: "100%", height: 200, padding: 5 }}>
-            <Image
-              style={{ width: "100%", height: "100%", borderRadius: 5 }}
-              source={{ uri: `${item?.media}` }}
-            ></Image>
-          </Wrapper>
-          <AppText.SubTitle style={{ marginLeft: 5 }}>
-            {item.title}
-          </AppText.SubTitle>
-          <Wrapper style={{ marginTop: 5 }}>
-            <AppText.Body>{item?.published_date}</AppText.Body>
-          </Wrapper>
-        </Wrapper.Card>
-      );
-    }
+    // if (index == 1) {
+    return (
+      <Button
+        onPress={() => console.log("Go to detaild")}
+        style={{
+          elevation: 10,
+          padding: "4%",
+          width: "90%",
+          alignSelf: "center",
+          marginVertical: 10,
+          backgroundColor: Colors.secondary,
+        }}
+      >
+        <View style={{ flexDirection: "row", marginBottom: 5 }}>
+          <Wrapper
+            style={{ height: 20, width: 20, backgroundColor: "black" }}
+          ></Wrapper>
+          <AppText.Title style={{ marginLeft: 5 }}>
+            {item.topic.toUpperCase()}
+          </AppText.Title>
+        </View>
+        <Wrapper style={{ height: 200 }}>
+          <Image
+            style={{ width: "100%", height: "100%", borderRadius: 5 }}
+            source={{ uri: `${item?.media}`, cache: "only-if-cached" }}
+          ></Image>
+        </Wrapper>
+        <AppText.SubTitle style={{ fontWeight: "800" }}>
+          {item.title}
+        </AppText.SubTitle>
+        <Wrapper style={{ marginTop: 5 }}>
+          <AppText.Body>{`${helperClass.formatDate(
+            item?.published_date
+          )}`}</AppText.Body>
+        </Wrapper>
+      </Button>
+    );
+    // }
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{ height: "100%", width: "100%" }}>
+      <Wrapper
+        style={{
+          width: "90%",
+          alignSelf: "center",
+          alignItems: "flex-end",
+          marginTop: "2%",
+        }}
+      >
+        <Button onPress={() => console.log("runtime error")} style={{}}>
+          <AppText.SubTitle
+            style={{ textAlign: "center", color: Colors.secondary }}
+          >
+            Runtime Error
+          </AppText.SubTitle>
+        </Button>
+      </Wrapper>
+      <View
+        style={{
+          height: "100%",
+          width: "100%",
+          marginTop: 5,
+          marginBottom: 5,
+        }}
+      >
         <FlatList
           style={{ flex: 1 }}
           keyExtractor={(item, index) => `${index}`}
@@ -82,6 +119,5 @@ const styles = StyleSheet.create({
     display: "flex",
     flex: 1,
     backgroundColor: Colors.secondary,
-    padding: "5%",
   },
 });

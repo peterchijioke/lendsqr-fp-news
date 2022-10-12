@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-
+import moment from 'moment'
 export default class Helper {
 
  textTrucate = function (str:string, length=100, ending=`...Read more`):string {
@@ -12,10 +12,10 @@ export default class Helper {
 
 // format date
 
-// formatDate = (date) => {
-//   moment.locale("en");
-//   return moment.parseZone(date).format("MMMM d, YYYY");
-// };
+formatDate = (date:string) => {
+  moment.locale("en");
+  return moment.parseZone(date).format("MMMM d, YYYY");
+};
 
 // check email
 validateEmail = (email:string):boolean => {
