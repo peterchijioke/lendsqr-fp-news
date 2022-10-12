@@ -37,7 +37,7 @@ yarn install
 yarn android
 ```
     
-   - I reommend you use yarn instead of npm
+   - I recommend you use yarn instead of npm
     
 ## Alternatively download the React Native APK Test App
 
