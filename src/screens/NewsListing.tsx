@@ -1,16 +1,7 @@
-import {
-  FlatList,
-  Image,
-  ListRenderItemInfo,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { FlatList, Image, SafeAreaView, StyleSheet, View } from "react-native";
 import React, { useEffect } from "react";
 import { Colors } from "../assets/colors/Colors";
 import Wrapper from "./components/wrapper/Wrapper";
-import { elevation } from "../partials/Style";
 import AppText from "./components/text/AppText";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -18,16 +9,19 @@ import {
   getNewsLoading,
 } from "../application/selectors/news/Index";
 import { NEWS_LOAD } from "../application/reducers/news/ui";
-import { useIsFocused } from "@react-navigation/native";
 import Helper from "../partials/Helper";
 import Button from "./components/button/Button";
+import { newsDetailsName } from "./NewsDetails";
 export let newsListingName = "newsListing";
 
-const NewsListing = () => {
+const NewsListing = ({ navigation }) => {
   const dispatch = useDispatch();
   const allNews = useSelector(getAllNews);
   const loading = useSelector(getNewsLoading);
   const helperClass = new Helper();
+  let Navigation = (screenName: any): void => {
+    navigation.navigate(`${screenName}`);
+  };
   useEffect(() => {
     dispatch(NEWS_LOAD(true));
   }, [dispatch]);
@@ -36,7 +30,7 @@ const NewsListing = () => {
     // if (index == 1) {
     return (
       <Button
-        onPress={() => console.log("Go to detaild")}
+        onPress={() => navigation.navigate(`${newsDetailsName}`, { item })}
         style={{
           elevation: 10,
           padding: "4%",
@@ -60,8 +54,8 @@ const NewsListing = () => {
             source={{ uri: `${item?.media}`, cache: "only-if-cached" }}
           ></Image>
         </Wrapper>
-        <AppText.SubTitle style={{ fontWeight: "800" }}>
-          {item.title}
+        <AppText.SubTitle style={{ fontWeight: "800", fontSize: 12 }}>
+          {item.title.toUpperCase()}
         </AppText.SubTitle>
         <Wrapper style={{ marginTop: 5 }}>
           <AppText.Body>{`${helperClass.formatDate(
