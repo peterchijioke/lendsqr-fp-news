@@ -32,7 +32,7 @@ const NewsListing = ({ navigation }) => {
       <Button
         onPress={() => navigation.navigate(`${newsDetailsName}`, { item })}
         style={{
-          elevation: 10,
+          elevation: 7,
           padding: "4%",
           width: "90%",
           alignSelf: "center",
@@ -40,7 +40,7 @@ const NewsListing = ({ navigation }) => {
           backgroundColor: Colors.secondary,
         }}
       >
-        <View style={{ flexDirection: "row", marginBottom: 5 }}>
+        <View style={{ flexDirection: "row", marginBottom: 10 }}>
           <Wrapper
             style={{ height: 20, width: 20, backgroundColor: "black" }}
           ></Wrapper>
@@ -54,7 +54,9 @@ const NewsListing = ({ navigation }) => {
             source={{ uri: `${item?.media}`, cache: "only-if-cached" }}
           ></Image>
         </Wrapper>
-        <AppText.SubTitle style={{ fontWeight: "800", fontSize: 12 }}>
+        <AppText.SubTitle
+          style={{ fontWeight: "800", fontSize: 12, marginTop: 10 }}
+        >
           {item.title.toUpperCase()}
         </AppText.SubTitle>
         <Wrapper style={{ marginTop: 5 }}>

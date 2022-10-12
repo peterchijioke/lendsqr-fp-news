@@ -49,6 +49,7 @@ const NewsDetails = ({ route, navigation, ...props }) => {
             style={{
               display: "flex",
               flexDirection: "row",
+              marginTop: 5,
               justifyContent: "space-between",
             }}
           >
