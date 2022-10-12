@@ -7,7 +7,7 @@ import  Config from "../../../../../Config";
                                const response = await fetch(url+ params,{
                                    headers: {
                                   'X-RapidAPI-Key': `36fd4b0648mshe6ff39a9fff795ep19ff77jsna772ea0effce`,
-                                  'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com' } });
+                                  'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com' }});
                                   console.log(response.json())
                              } catch (error) {
                               console.log(error)
