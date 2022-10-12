@@ -18,11 +18,11 @@ const NewsListing = () => {
   const allNews = useSelector(getAllNews);
   const loading = useSelector(getNewsLoading);
 
-  // useEffect(() => {
-  //   console.log("===============================================");
-  //   console.log(allNews);
-  //   console.log("===============================================");
-  // }, [allNews]);
+  useEffect(() => {
+    console.log("===============================================");
+    console.log(allNews?.articles?.length);
+    console.log("===============================================");
+  }, [allNews]);
 
   useEffect(() => {
     dispatch(NEWS_LOAD(true));
@@ -31,6 +31,7 @@ const NewsListing = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Wrapper.Card style={{ elevation: 4 }}>
+        <View style={{}}></View>
         <AppText.SubTitle>peter</AppText.SubTitle>
       </Wrapper.Card>
     </SafeAreaView>
