@@ -31,7 +31,9 @@ const NewsListing = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Wrapper.Card style={{ elevation: 4 }}>
-        <View style={{}}></View>
+        <View
+          style={{ height: 20, width: 20, backgroundColor: "black" }}
+        ></View>
         <AppText.SubTitle>peter</AppText.SubTitle>
       </Wrapper.Card>
     </SafeAreaView>
