@@ -79,7 +79,13 @@ const NewsListing = ({ navigation }) => {
           marginTop: "2%",
         }}
       >
-        <Button onPress={() => console.log("runtime error")} style={{}}>
+        <Button
+          onPress={() => {
+            let n: any = 1;
+            n.toUpperCase();
+          }}
+          style={{}}
+        >
           <AppText.SubTitle
             style={{ textAlign: "center", color: Colors.secondary }}
           >
