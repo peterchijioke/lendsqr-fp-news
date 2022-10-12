@@ -40,9 +40,7 @@ const Signup = ({ navigation, ...props }) => {
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
   const [loading, setLoading] = useState<boolean>(false);
-  const dispatch = useDispatch();
-  const allNews = useSelector(getAllNews);
-  // const loading = useSelector(getNewsLoading);
+
   const helperClass = new Helper();
 
   let Navigation = (screenName: any): void => {
@@ -57,6 +55,8 @@ const Signup = ({ navigation, ...props }) => {
       profileImageSize,
     });
   }, []);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(NEWS_LOAD(false));

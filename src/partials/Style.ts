@@ -14,7 +14,7 @@ elevation: 5,
 
 export let text={
 	font:{
-		fontSize:22,
+		fontSize:14,
 		color:Colors.baseAncent
 	}
 }
