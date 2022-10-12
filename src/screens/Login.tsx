@@ -15,7 +15,7 @@ import Button from "./components/button/Button";
 import AppText from "./components/text/AppText";
 import Wrapper from "./components/wrapper/Wrapper";
 import AppInput from "./components/input/AppInput";
-import BouncyCheckbox from "react-native-bouncy-checkbox";
+import crashlytics from "@react-native-firebase/crashlytics";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { newsListingName } from "./NewsListing";
@@ -25,7 +25,6 @@ export let signupName = "signup";
 export let loginName = "login";
 
 const Login = ({ navigation, ...props }) => {
-  const [user, setUser] = useState<object>();
   const [eyeState, setEyeState] = useState<boolean>(true);
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
@@ -45,6 +44,7 @@ const Login = ({ navigation, ...props }) => {
   }, []);
 
   const HandleLogin = async () => {
+    crashlytics().log("Loging User in");
     setLoading(true);
     const userDetails: object = {
       email,
@@ -63,22 +63,27 @@ const Login = ({ navigation, ...props }) => {
             setTimeout(() => {
               setLoading(false);
               Navigation(newsListingName);
+              crashlytics().log("User loged in");
             }, 3000);
           } else {
             setLoading(false);
             setError("Ooops.. This user does not exist.");
+            crashlytics().log("Ooops.. This user does not exist.");
           }
         } else {
           setLoading(false);
           setError("Ooops.. This user does not exist.");
+          crashlytics().log("Ooops.. This user does not exist.");
         }
       } else {
         setLoading(false);
         setError("Ooops.. The provided email is not valid");
+        crashlytics().log("Ooops.. The provided email is not valid");
       }
     } else {
       setLoading(false);
       setError("Ooops.. Please make sure all fields are filled");
+      crashlytics().log("Ooops.. Please make sure all fields are filled");
     }
   };
 
@@ -88,6 +93,9 @@ const Login = ({ navigation, ...props }) => {
       let hasPlayService = await GoogleSignin.hasPlayServices();
       if (!hasPlayService) {
         setError("Your mobile phone do not support google play service");
+        crashlytics().log(
+          "Your mobile phone do not support google play service"
+        );
         return;
       }
       const { user } = await GoogleSignin.signIn();
@@ -112,14 +120,17 @@ const Login = ({ navigation, ...props }) => {
           } else {
             setLoading(false);
             setError("Ooops.. Unknown process, please try again");
+            crashlytics().log("Ooops.. Unknown process, please try again");
           }
         } else {
           setLoading(false);
           setError("Ooops.. This user does not exist, please signup");
+          crashlytics().log("Ooops.. This user does not exist, please signup");
         }
       }
-    } catch (error) {
-      console.error(error);
+    } catch (error: any) {
+      console.log(error);
+      crashlytics().recordError(error.message);
     }
   };
 
@@ -175,7 +186,7 @@ const Login = ({ navigation, ...props }) => {
             }}
           >
             <AppText.SubTitle
-              onPressIn={() => console.log("Forgot Password **To do**")}
+              onPressIn={() => crashlytics().log("Forgot Password **To do**")}
               style={{ fontSize: 18, color: Colors.primary }}
             >
               Forgot password

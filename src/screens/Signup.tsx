@@ -30,6 +30,7 @@ import Helper from "../partials/Helper";
 import { newsListingName } from "./NewsListing";
 import Loading from "./components/loading/Loading";
 export let signupName = "signup";
+import crashlytics from "@react-native-firebase/crashlytics";
 
 const Signup = ({ navigation, ...props }) => {
   const [toggleCheckBox, setToggleCheckBox] = useState<boolean>(false);
@@ -66,8 +67,9 @@ const Signup = ({ navigation, ...props }) => {
     setLoading(true);
     try {
       AsyncStorage.getItem("userdetails");
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
+      crashlytics().recordError(error.message);
     }
     const userDetails: object = {
       name: fullName,
@@ -94,16 +96,21 @@ const Signup = ({ navigation, ...props }) => {
         } else {
           setLoading(false);
           setError("Ooops.. The provided email is not valid");
+          crashlytics().log("Ooops.. The provided email is not valid");
         }
       } else {
         setLoading(false);
         setError(
           "Ooops.. Confirm you read our privacy policy by checking the box."
         );
+        crashlytics().log(
+          "Ooops.. Confirm you read our privacy policy by checking the box."
+        );
       }
     } else {
       setLoading(false);
       setError("Ooops.. Please make sure all fields are filled");
+      crashlytics().log("Ooops.. Please make sure all fields are filled");
     }
   };
 
@@ -114,6 +121,9 @@ const Signup = ({ navigation, ...props }) => {
       let hasPlayService = await GoogleSignin.hasPlayServices();
       if (!hasPlayService) {
         setError("Your mobile phone do not support google play service");
+        crashlytics().log(
+          "Your mobile phone do not support google play service"
+        );
         return;
       }
       const { user } = await GoogleSignin.signIn();
@@ -142,9 +152,12 @@ const Signup = ({ navigation, ...props }) => {
           "Alert",
           "Please use the alternative signup, the information needed was not provided by google."
         );
+        crashlytics().log(
+          "Please use the alternative signup, the information needed was not provided by google."
+        );
       }
-    } catch (error) {
-      console.error(error);
+    } catch (error: any) {
+      crashlytics().recordError(error.message);
     }
   };
 
@@ -243,7 +256,6 @@ const Signup = ({ navigation, ...props }) => {
             <AppText.Body style={{ fontSize: 14, marginTop: "2%" }}>
               Already registered?{" "}
               <AppText.Body
-                onPress={() => console.log("To Login")}
                 onPressIn={() => Navigation(`${loginName}`)}
                 style={{
                   fontSize: 14,

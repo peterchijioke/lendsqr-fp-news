@@ -18,10 +18,6 @@ const NewsDetails = ({ route, navigation, ...props }) => {
     navigation.navigate(`${screenName}`);
   };
 
-  useEffect(() => {
-    console.log(item);
-  }, []);
-
   const helperClass = new Helper();
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.secondary }}>
