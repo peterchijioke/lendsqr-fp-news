@@ -34,8 +34,8 @@ This is simple quote application developed using react-native; it contains a pre
 How to Install & test the React Native App
 
 ```bash
-git clone https://github.com/peterchijioke/crud-app-react-native.git
-cd crude-app
+git clone https://github.com/peterchijioke/lendsqr-fp-news.git
+cd lendsqr-fp-news
 yarn install
 yarn android
 ```
@@ -44,7 +44,7 @@ yarn android
     
 ## Alternatively download the React Native APK Test App
 
-- [Android APK: ](https://drive.google.com/file/d/1cAdPBxgoFSXggjaPyQk5ozgrN2ihIag3/view?usp=sharing)
+- [Android APK: ](https://appdistribution.firebase.google.com/testerapps/null/releases/1qlef3miuvn60)
 
 ## Steps taken to build this app include:
 - Create a react native application using ```npx react-native init crud-app```
