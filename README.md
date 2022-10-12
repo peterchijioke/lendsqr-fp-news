@@ -61,23 +61,24 @@ yarn android
 -  Then setup the platform code in the react-native project. 
 -  I installed also react-navigation, which is basicaly used for routing and navigation to and from a screen
 -  The last package was ```react-native-codepush```, which is plugin that provides client-side integration for the CodePush service in react-native
+-  I used the clean architecture design, which provide a way to organize code in such a way that it encapsulates the business logic but keeps it separate from the delivery mechanism.
+-  On the project directory you will find the core directories which are: Infrastructure, Screens, application.
+-  The infrastructure contains the fetch rutine
+-  The Screen contains the application screens and components basically tsx files etc,
+-  The Application contains the redux files.
 
 ## Tech Stack
 
-**Client:** Bare React-Native, Redux Toolkit
+**Client:** Bare React-Native, Redux Toolkit, Codepush, Firebase
 
-**Server:** Fake server
+**Server:** RapidAPI endpoint
 
 
-## Features
-
-- Create quote
-- Delete quote
-- Update quote
-- Cross platform (Android & ios)
 
 ## Screenshots
 
 ![](/image1.jpg)
 ![](/image2.jpg)
+![](/image3.jpg)
+![](/image4.jpg)
 
