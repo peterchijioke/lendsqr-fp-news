@@ -1,43 +1,53 @@
-
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login, { loginName } from './screens/Login';
-import Signup, { signupName } from './screens/Signup';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Login, { loginName } from "./screens/Login";
+import Signup, { signupName } from "./screens/Signup";
 import codePush from "react-native-code-push";
-import NewsListing, { newsListingName } from './screens/NewsListing';
-import NewsDetails, { newsDetailsName } from './screens/NewsDetails';
-import { Provider, useDispatch } from 'react-redux';
-import Store from './application/Store'
-import { NEWS_LOADING } from './application/actions/type/news';
+import NewsListing, { newsListingName } from "./screens/NewsListing";
+import NewsDetails, { newsDetailsName } from "./screens/NewsDetails";
+import { Provider, useDispatch } from "react-redux";
+import Store from "./application/Store";
+import { NEWS_LOADING } from "./application/actions/type/news";
 
 const Stack = createNativeStackNavigator();
-      
+
 function App() {
-
   return (
-   <Provider store={Store}>
-     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen options={{ title: "Login" }} name={loginName} component={Login} />
-        <Stack.Screen options={
-         { title: "Sign Up" }
-        } name={signupName} component={Signup} />
-        
-        <Stack.Screen options={{title: "News List"}} name={newsListingName} component={NewsListing} />
-        <Stack.Screen options={{
-          title: "News Detail"
-        }} name={newsDetailsName} component={NewsDetails} />
-      </Stack.Navigator>
-    </NavigationContainer>
-   </Provider>
-   );
-}
+    <Provider store={Store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            options={{ title: "News List" }}
+            name={newsListingName}
+            component={NewsListing}
+          />
+          <Stack.Screen
+            options={{ title: "Login" }}
+            name={loginName}
+            component={Login}
+          />
+          <Stack.Screen
+            options={{ title: "Sign Up" }}
+            name={signupName}
+            component={Signup}
+          />
 
+          <Stack.Screen
+            options={{
+              title: "News Detail",
+            }}
+            name={newsDetailsName}
+            component={NewsDetails}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
+  );
+}
 
 let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_START };
 export default codePush(codePushOptions)(App);
-
 
 /*
 
