@@ -109,14 +109,20 @@ const Login = ({ navigation, ...props }) => {
       };
 
       if (user?.email && user?.name) {
-        const storedUser = await helperClass.getData("userdetails");
+        const storedUser = await helperClass.getData("User");
         if (storedUser !== "error" && storedUser !== null) {
           let { email: storedEmail, name: storedName, provider } = storedUser;
-          if (provider == "google") {
-            setTimeout(() => {
+          if (provider === "google") {
+            if (user.name == storedName && user.email === storedEmail) {
+              setTimeout(() => {
+                setLoading(false);
+                Navigation(newsListingName);
+              }, 3000);
+            } else {
               setLoading(false);
-              Navigation(newsListingName);
-            }, 3000);
+              setError("Ooops.. Ooops.. User do not exist");
+              crashlytics().log("Ooops.. User do not exist");
+            }
           } else {
             setLoading(false);
             setError("Ooops.. Unknown process, please try again");
@@ -211,10 +217,7 @@ const Login = ({ navigation, ...props }) => {
           >
             <Button.SignUp
               text="Login"
-              // onPress={HandleLogin}
-              onPress={() => {
-                helperClass.getData("userdetails");
-              }}
+              onPress={HandleLogin}
               style={{ padding: 10, width: "60%" }}
             />
             <AppText.Body style={{ fontSize: 14, marginTop: "2%" }}>

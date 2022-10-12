@@ -48,32 +48,15 @@ storeData =  async (value:any,storage_Key:string) => {
 }
 
 
- getData = async (storage_Key:string) => {
-  remoteConfig().fetch().then(()=>remoteConfig().activate()).then((activated)=>{
-    if (activated) {
-      return remoteConfig().getValue('User')
-    }else{
-       Crash().log("No active user");
-        console.log("No active user ")
-    }
-  }).then((data)=>{
-        const result = data?.asString()
-        console.log(result)
-  })
-
+ getData = async (key:string) : Promise<any>=>  {
   try {
-    const value = await AsyncStorage.getItem(storage_Key)
-    if(value !== null) {
-      return JSON.parse(value)
-    }else{
-      return null
-    }
-  } catch(e) {
-    return `error`
+    const User =  remoteConfig().getValue(key)
+  return User.asString()
+  } catch (e:any) {
+     Crash().recordError(e);
+        console.error(e)
+    return 'error'
   }
-
-
-
 }
 
 
