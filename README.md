@@ -1,5 +1,5 @@
 # lendsqr-fp-news
- FP News is a simple new application
+ FP News is a simple news application
 
 
 ## Table of Contents
@@ -20,8 +20,12 @@
 * Performance
 * Remote-config
 * Messaging
-- Create a middleware to log all user activities and screen change using Firebase event
+- Middleware to log all user activities and screen change using Firebase event
 - A button that throws a runtime error when pressed.
+- Login
+- Signup
+- Google signin
+- Google signup
 
 
 
