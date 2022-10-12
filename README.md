@@ -64,6 +64,7 @@ yarn android
 -  Then setup the platform code in the react-native project. 
 -  I installed also react-navigation, which is basicaly used for routing and navigation to and from a screen
 -  The last package was ```react-native-codepush```, which is plugin that provides client-side integration for the CodePush service in react-native
+-  I installed the google signin package ```@react-native-google-signin/google-signin```, which handle the client side user auth by google.
 -  I used the clean architecture design, which provide a way to organize code in such a way that it encapsulates the business logic but keeps it separate from the delivery mechanism.
 -  On the project directory you will find the core directories which are: Infrastructure, Screens, application.
 -  The infrastructure contains the fetch rutine
