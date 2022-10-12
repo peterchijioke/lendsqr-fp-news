@@ -49,16 +49,33 @@ storeData =  async (value:any,storage_Key:string) => {
 
 
  getData = async (storage_Key:string) => {
-  try {
-    const value = await AsyncStorage.getItem(storage_Key)
-    if(value !== null) {
-      return JSON.parse(value)
+  remoteConfig().fetch().then(()=>remoteConfig().activate()).then((activated)=>{
+    if (activated) {
+      return remoteConfig().getValue('User')
     }else{
-      return null
+       Crash().log("No active user");
+        console.log("No active user ")
     }
-  } catch(e) {
-    return `error`
-  }
+  }).then((data)=>{
+        const result = data?.asString()
+        console.log(result)
+  })
+
+  // try {
+  //   const value = await AsyncStorage.getItem(storage_Key)
+  //   if(value !== null) {
+  //     return JSON.parse(value)
+  //   }else{
+  //     return null
+  //   }
+  // } catch(e) {
+  //   return `error`
+  // }
+
+
+
+
+
 }
 
 

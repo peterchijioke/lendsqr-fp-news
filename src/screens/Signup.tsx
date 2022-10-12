@@ -137,14 +137,12 @@ const Signup = ({ navigation, ...props }) => {
           provider: "google",
           photo: user.photo,
         };
-        let responds = "";
-        await helperClass.storeData(userDetails, "userdetails");
-        return;
+        let responds = await helperClass.storeData(userDetails, "userdetails");
         if (responds == "saved") {
           setTimeout(() => {
             setLoading(false);
             Navigation(loginName);
-          }, 4000);
+          }, 3000);
           crashlytics().log("User signed up with google");
         } else {
           setLoading(false);
@@ -229,6 +227,7 @@ const Signup = ({ navigation, ...props }) => {
           {/* Check box */}
           <Wrapper
             style={{
+              justifyContent: "flex-start",
               width: "85%",
               marginBottom: "5%",
               alignItems: "center",
