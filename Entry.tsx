@@ -8,6 +8,8 @@ import NewsListing, { newsListingName } from "./src/screens/NewsListing";
 import NewsDetails, { newsDetailsName } from "./src/screens/NewsDetails";
 import { Provider, useDispatch } from "react-redux";
 import Store from "./src/application/Store";
+import remoteConfig from "@react-native-firebase/remote-config";
+import Crash from "@react-native-firebase/crashlytics";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +19,11 @@ function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
+            options={{ title: "Sign Up" }}
+            name={signupName}
+            component={Signup}
+          />
+          <Stack.Screen
             options={{ title: "News List" }}
             name={newsListingName}
             component={NewsListing}
@@ -25,11 +32,6 @@ function App() {
             options={{ title: "Login" }}
             name={loginName}
             component={Login}
-          />
-          <Stack.Screen
-            options={{ title: "Sign Up" }}
-            name={signupName}
-            component={Signup}
           />
 
           <Stack.Screen

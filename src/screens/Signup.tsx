@@ -45,7 +45,7 @@ const Signup = ({ navigation, ...props }) => {
   const helperClass = new Helper();
 
   let Navigation = (screenName: any): void => {
-    navigation.navigate(`${screenName}`);
+    navigation.navigate(screenName);
   };
 
   let profileImageSize = 150;
@@ -69,7 +69,7 @@ const Signup = ({ navigation, ...props }) => {
       AsyncStorage.getItem("userdetails");
     } catch (error: any) {
       console.error(error);
-      crashlytics().recordError(error.message);
+      crashlytics().recordError(error);
     }
     const userDetails: object = {
       name: fullName,
@@ -137,7 +137,9 @@ const Signup = ({ navigation, ...props }) => {
           provider: "google",
           photo: user.photo,
         };
-        let responds = await helperClass.storeData(userDetails, "userdetails");
+        let responds = "";
+        await helperClass.storeData(userDetails, "userdetails");
+        return;
         if (responds == "saved") {
           setTimeout(() => {
             setLoading(false);
@@ -158,7 +160,7 @@ const Signup = ({ navigation, ...props }) => {
         );
       }
     } catch (error: any) {
-      crashlytics().recordError(error.message);
+      crashlytics().recordError(error);
     }
   };
 
@@ -184,28 +186,38 @@ const Signup = ({ navigation, ...props }) => {
               </AppText.SubTitle>
             </Wrapper>
             {/* Name */}
-            <Wrapper style={{ marginTop: "4%", marginBottom: "4%" }}>
-              <AppInput onChangeText={setFullName} placeholder="Full Name" />
-            </Wrapper>
-
-            {/* Email Entry */}
-            <Wrapper style={{ marginTop: "5%", marginBottom: "4%" }}>
+            <Wrapper style={{ marginTop: "2%", marginBottom: "4%" }}>
               <AppInput
-                onChangeText={setPhoneNumber}
-                placeholder="Phone Number"
+                label="Full Name"
+                onChangeText={setFullName}
+                placeholder="Full Name"
               />
             </Wrapper>
 
             {/* Email Entry */}
-            <Wrapper style={{ marginTop: "5%", marginBottom: "4%" }}>
-              <AppInput.Email onChangeText={setEmail} placeholder="Email" />
+            <Wrapper style={{ marginTop: "2%", marginBottom: "4%" }}>
+              <AppInput
+                onChangeText={setPhoneNumber}
+                placeholder="Phone Number"
+                label="Phone Number"
+              />
+            </Wrapper>
+
+            {/* Email Entry */}
+            <Wrapper style={{ marginTop: "2%", marginBottom: "4%" }}>
+              <AppInput.Email
+                onChangeText={setEmail}
+                placeholder="Email"
+                label="Email"
+              />
             </Wrapper>
 
             {/* Password Entry */}
-            <Wrapper style={{ marginTop: "5%", marginBottom: "2%" }}>
+            <Wrapper style={{ marginTop: "2%", marginBottom: "2%" }}>
               <AppInput.Password
                 onChangeText={setPassword}
                 placeholder="Password"
+                label="Password"
                 eyeState={eyeState}
                 secureTextEntry={eyeState}
                 onPressEye={() => {
@@ -217,12 +229,11 @@ const Signup = ({ navigation, ...props }) => {
           {/* Check box */}
           <Wrapper
             style={{
-              justifyContent: "flex-start",
               width: "85%",
               marginBottom: "5%",
               alignItems: "center",
               marginTop: "1%",
-              paddingLeft: "2%",
+              // paddingLeft: "2%",
             }}
           >
             <BouncyCheckbox
@@ -257,7 +268,10 @@ const Signup = ({ navigation, ...props }) => {
             <AppText.Body style={{ fontSize: 14, marginTop: "2%" }}>
               Already registered?{" "}
               <AppText.Body
-                onPressIn={() => Navigation(`${loginName}`)}
+                onPress={() => {
+                  console.log("peter");
+                  Navigation(loginName);
+                }}
                 style={{
                   fontSize: 14,
                   color: Colors.primary,

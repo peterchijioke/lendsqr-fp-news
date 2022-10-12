@@ -301,6 +301,7 @@ dependencies {
     implementation project(path: ":@react-native-firebase_config")
      implementation project(path: ":@react-native-firebase_perf")
       implementation project(path: ":@react-native-firebase_crashlytics")
+      implementation project(path: ":@react-native-firebase_analytics")
 
     //   vector icon
      implementation project(':react-native-vector-icons')

@@ -23,7 +23,7 @@ import Helper from "../partials/Helper";
 import Loading from "./components/loading/Loading";
 export let signupName = "signup";
 export let loginName = "login";
-
+type label = string;
 const Login = ({ navigation, ...props }) => {
   const [eyeState, setEyeState] = useState<boolean>(true);
   const [email, setEmail] = useState<string>();
@@ -130,7 +130,7 @@ const Login = ({ navigation, ...props }) => {
       }
     } catch (error: any) {
       console.log(error);
-      crashlytics().recordError(error.message);
+      crashlytics().recordError(error);
     }
   };
 
@@ -158,12 +158,17 @@ const Login = ({ navigation, ...props }) => {
 
             {/* Email Entry */}
             <Wrapper style={{ marginTop: "5%", marginBottom: "4%" }}>
-              <AppInput.Email onChangeText={setEmail} placeholder="Email" />
+              <AppInput.Email
+                label="Email"
+                onChangeText={setEmail}
+                placeholder="Email"
+              />
             </Wrapper>
 
             {/* Password Entry */}
             <Wrapper style={{ marginTop: "5%", marginBottom: "2%" }}>
               <AppInput.Password
+                label="Password"
                 onChangeText={setPassword}
                 placeholder="Password"
                 eyeState={eyeState}
@@ -186,7 +191,7 @@ const Login = ({ navigation, ...props }) => {
             }}
           >
             <AppText.SubTitle
-              onPressIn={() => crashlytics().log("Forgot Password **To do**")}
+              onPress={() => crashlytics().log("Forgot Password **To do**")}
               style={{ fontSize: 18, color: Colors.primary }}
             >
               Forgot password

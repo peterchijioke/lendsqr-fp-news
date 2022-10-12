@@ -1,5 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import moment from 'moment'
+import remoteConfig from '@react-native-firebase/remote-config';
+import Crash from '@react-native-firebase/crashlytics'
 export default class Helper {
 
  textTrucate = function (str:string, length=100, ending=`...Read more`):string {
@@ -27,13 +29,21 @@ validateEmail = (email:string):boolean => {
 
 // store user data in storage 
 
-storeData = async (value:any,storage_Key:string) => {
+storeData =  async (value:any,storage_Key:string) => {
   try {
     const jsonValue = JSON.stringify(value)
-    await AsyncStorage.setItem(storage_Key, jsonValue)
+    // await AsyncStorage.setItem(storage_Key, jsonValue)
+      await remoteConfig()
+      .setDefaults({
+        User: jsonValue,
+      })
+
     return 'saved'
   } catch (e:any) {
+     Crash().recordError(e);
+        console.log(e)
     return 'error'
+   
   }
 }
 

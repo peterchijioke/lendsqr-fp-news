@@ -14,6 +14,7 @@ import Button from "./components/button/Button";
 import { newsDetailsName } from "./NewsDetails";
 export let newsListingName = "newsListing";
 import crashlytics from "@react-native-firebase/crashlytics";
+import remoteConfig from "@react-native-firebase/remote-config";
 
 const NewsListing = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -24,7 +25,9 @@ const NewsListing = ({ navigation }) => {
   let Navigation = (screenName: any): void => {
     navigation.navigate(`${screenName}`);
   };
-
+  useEffect(() => {
+    const awesomeNewFeature = remoteConfig().getValue("user");
+  }, []);
   useEffect(() => {
     dispatch(NEWS_LOAD(true));
   }, [dispatch]);
@@ -85,7 +88,18 @@ const NewsListing = ({ navigation }) => {
           marginTop: "2%",
         }}
       >
-        <Button onPress={() => crashlytics().crash()} style={{}}>
+        <Button
+          onPress={() => {
+            try {
+              let f: any = 0;
+              f.toLowerCase();
+            } catch (error: any) {
+              crashlytics().recordError(error);
+              console.log(error);
+            }
+          }}
+          style={{}}
+        >
           <AppText.SubTitle
             style={{ textAlign: "center", color: Colors.secondary }}
           >
