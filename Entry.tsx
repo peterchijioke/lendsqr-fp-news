@@ -19,19 +19,21 @@ function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
+            options={{ title: "Login" }}
+            name={loginName}
+            component={Login}
+          />
+
+          <Stack.Screen
             options={{ title: "Sign Up" }}
             name={signupName}
             component={Signup}
           />
+
           <Stack.Screen
             options={{ title: "News List" }}
             name={newsListingName}
             component={NewsListing}
-          />
-          <Stack.Screen
-            options={{ title: "Login" }}
-            name={loginName}
-            component={Login}
           />
 
           <Stack.Screen

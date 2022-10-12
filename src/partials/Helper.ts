@@ -40,7 +40,7 @@ storeData =  async (value:object) => {
 
     return 'saved'
   } catch (e:any) {
-     Crash().recordError(e);
+     Crash().recordError(new Error(e.message));
         console.log(e)
     return 'error'
    
@@ -49,14 +49,22 @@ storeData =  async (value:object) => {
 
 
  getData = async (key:string) : Promise<any>=>  {
-  try {
-    const User =  remoteConfig().getValue(key)
-  return User.asString()
-  } catch (e:any) {
-     Crash().recordError(e);
-        console.error(e)
-    return 'error'
-  }
+
+ try {
+          const User: any = await remoteConfig().getValue("User");
+          console.log(User.asString());
+          if (User.asString()) {
+            return User.asString();
+          } else {
+            return null;
+          }
+        } catch (e: any) {
+          console.error(e);
+           Crash().recordError(new Error(e.message));
+           return "error";
+        }
+
+
 }
 
 

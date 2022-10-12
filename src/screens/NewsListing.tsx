@@ -14,10 +14,8 @@ import Button from "./components/button/Button";
 import { newsDetailsName } from "./NewsDetails";
 export let newsListingName = "newsListing";
 import crashlytics from "@react-native-firebase/crashlytics";
-import remoteConfig from "@react-native-firebase/remote-config";
 
 const NewsListing = ({ navigation }) => {
-  const dispatch = useDispatch();
   const allNews = useSelector(getAllNews);
   const loading = useSelector(getNewsLoading);
   const helperClass = new Helper();
@@ -25,12 +23,6 @@ const NewsListing = ({ navigation }) => {
   let Navigation = (screenName: any): void => {
     navigation.navigate(`${screenName}`);
   };
-  useEffect(() => {
-    const awesomeNewFeature = remoteConfig().getValue("user");
-  }, []);
-  useEffect(() => {
-    dispatch(NEWS_LOAD(true));
-  }, [dispatch]);
 
   const ItemComponent = ({ item, index }): any => {
     // if (index == 1) {
@@ -117,6 +109,7 @@ const NewsListing = ({ navigation }) => {
       >
         <FlatList
           style={{ flex: 1 }}
+          refreshing={loading}
           keyExtractor={(item, index) => `${index}`}
           data={allNews?.articles}
           renderItem={({ item, index }: any) => (
