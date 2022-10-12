@@ -1,14 +1,14 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Login, { loginName } from "./screens/Login";
-import Signup, { signupName } from "./screens/Signup";
+import Login, { loginName } from "./src/screens/Login";
+import Signup, { signupName } from "./src/screens/Signup";
 import codePush from "react-native-code-push";
-import NewsListing, { newsListingName } from "./screens/NewsListing";
-import NewsDetails, { newsDetailsName } from "./screens/NewsDetails";
+import NewsListing, { newsListingName } from "./src/screens/NewsListing";
+import NewsDetails, { newsDetailsName } from "./src/screens/NewsDetails";
 import { Provider, useDispatch } from "react-redux";
-import Store from "./application/Store";
-import { NEWS_LOADING } from "./application/actions/type/news";
+import Store from "./src/application/Store";
+import { NEWS_LOADING } from "./src/application/actions/type/news";
 
 const Stack = createNativeStackNavigator();
 
