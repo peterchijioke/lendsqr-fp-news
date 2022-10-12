@@ -13,6 +13,7 @@ import Helper from "../partials/Helper";
 import Button from "./components/button/Button";
 import { newsDetailsName } from "./NewsDetails";
 export let newsListingName = "newsListing";
+import crashlytics from "@react-native-firebase/crashlytics";
 
 const NewsListing = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -30,7 +31,10 @@ const NewsListing = ({ navigation }) => {
     // if (index == 1) {
     return (
       <Button
-        onPress={() => navigation.navigate(`${newsDetailsName}`, { item })}
+        onPress={() => {
+          navigation.navigate(`${newsDetailsName}`, { item });
+          crashlytics().log("User id ");
+        }}
         style={{
           elevation: 7,
           padding: "4%",

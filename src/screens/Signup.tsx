@@ -143,6 +143,7 @@ const Signup = ({ navigation, ...props }) => {
             setLoading(false);
             Navigation(loginName);
           }, 4000);
+          crashlytics().log("User signed up with google");
         } else {
           setLoading(false);
         }
