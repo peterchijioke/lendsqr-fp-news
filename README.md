@@ -78,6 +78,8 @@ yarn android
 **Server:** RapidAPI endpoint
 
 
+## Unit Test Cases
+
 
 ## Screenshots
 
