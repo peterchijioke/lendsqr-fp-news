@@ -9,6 +9,7 @@
 * [Alternatively download the React Native APK Test App](#Alternatively%download%the%React%Native%APK%Test%App)
 * [Steps taken to build this app](#Steps%taken%to%build%this%app%include)
 * [Tech Stack](#Tech%Stack)
+* [Unit Test Cases](#Unit%Test%Cases)
 * [Screenshots](#Screenshots)
 
 
@@ -79,7 +80,8 @@ yarn android
 
 
 ## Unit Test Cases
-
+**Redux**
+- Test is on the components that either dispatch actions on the redux store . This means we will test ./Entry.tsx. Thus I created Entry.test.tsx
 
 ## Screenshots
 
