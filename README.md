@@ -1,5 +1,5 @@
 # lendsqr-fp-news
- FP News is a simple news application
+ FP News is a simple news application built using react-native; 
 
 
 ## Table of Contents
