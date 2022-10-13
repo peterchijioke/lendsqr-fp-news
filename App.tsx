@@ -8,6 +8,7 @@ import NewsListing, { newsListingName } from "./src/screens/NewsListing";
 import NewsDetails, { newsDetailsName } from "./src/screens/NewsDetails";
 import { Provider, useDispatch } from "react-redux";
 import Store from "./src/application/Store";
+import { render, screen, fireEvent } from "@testing-library/react-native";
 
 import analytics from "@react-native-firebase/analytics";
 
