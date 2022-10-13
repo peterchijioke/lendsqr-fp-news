@@ -81,7 +81,7 @@ yarn android
 
 ## Unit Test Cases
 **Redux**
-- Test is on the components that either dispatch actions on the redux store . This means we will test ./Entry.tsx. Thus I created Entry.test.tsx
+- Test is on the components that either dispatch actions on the redux store . This means we will test ./App.tsx. Thus I created App.test.tsx
 
 ## Screenshots
 
