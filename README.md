@@ -81,8 +81,15 @@ yarn android
 
 ## Screenshots
 
+- Login screen
 ![](/image1.jpg)
+
+- Signup screen
 ![](/image2.jpg)
+
+- News Listing screen
 ![](/image3.jpg)
+
+- News Details Screen
 ![](/image4.jpg)
 
