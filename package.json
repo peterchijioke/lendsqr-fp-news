@@ -62,12 +62,14 @@
       "json",
       "node"
     ],
-     "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
     "setupFiles": [
-  "./jestSetup.ts"
-],
-      "transformIgnorePatterns": [
-    "node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation)"
-  ]
+      "./jestSetup.ts"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation)"
+    ]
   }
 }

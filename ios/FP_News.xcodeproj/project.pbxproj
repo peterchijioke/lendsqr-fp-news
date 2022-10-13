@@ -12,9 +12,10 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D2547D228F1766500B3FEBE /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D2547CF28F1766400B3FEBE /* main.jsbundle */; };
-		2D4F98D728F18D0E00F3EC9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F98D428F18D0E00F3EC9A /* GoogleService-Info.plist */; };
 		2DDC249E28F167EF00EB1CFE /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDC249B28F1671F00EB1CFE /* libCodePush.a */; };
 		2DDC24A028F1684100EB1CFE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDC249F28F1684100EB1CFE /* libz.tbd */; };
+		2DE525A428F81E85007B650D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE525A128F81E85007B650D /* GoogleService-Info.plist */; };
+		2DE525A528F81E85007B650D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE525A128F81E85007B650D /* GoogleService-Info.plist */; };
 		63DCFECFB552919492E248BD /* Pods_FP_News_FP_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D0AECED525D9CC8602E19D /* Pods_FP_News_FP_NewsTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C240FF08D94C2642E0DACFD9 /* Pods_FP_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2649AB7BACA1326D7969DB9C /* Pods_FP_News.framework */; };
@@ -57,9 +58,9 @@
 		16D0AECED525D9CC8602E19D /* Pods_FP_News_FP_NewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FP_News_FP_NewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2649AB7BACA1326D7969DB9C /* Pods_FP_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FP_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2547CF28F1766400B3FEBE /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		2D4F98D428F18D0E00F3EC9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DDC249528F1671F00EB1CFE /* CodePush.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
 		2DDC249F28F1684100EB1CFE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2DE525A128F81E85007B650D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-FP_News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FP_News.debug.xcconfig"; path = "Target Support Files/Pods-FP_News/Pods-FP_News.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-FP_News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FP_News.release.xcconfig"; path = "Target Support Files/Pods-FP_News/Pods-FP_News.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-FP_News-FP_NewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FP_News-FP_NewsTests.debug.xcconfig"; path = "Target Support Files/Pods-FP_News-FP_NewsTests/Pods-FP_News-FP_NewsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,10 +111,10 @@
 		13B07FAE1A68108700A75B9A /* FP_News */ = {
 			isa = PBXGroup;
 			children = (
+				2DE525A128F81E85007B650D /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				2D4F98D428F18D0E00F3EC9A /* GoogleService-Info.plist */,
 				2D2547CF28F1766400B3FEBE /* main.jsbundle */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
@@ -297,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE525A528F81E85007B650D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D2547D228F1766500B3FEBE /* main.jsbundle in Resources */,
-				2D4F98D728F18D0E00F3EC9A /* GoogleService-Info.plist in Resources */,
+				2DE525A428F81E85007B650D /* GoogleService-Info.plist in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
