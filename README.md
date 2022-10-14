@@ -71,6 +71,7 @@ yarn android
 -  The infrastructure contains the fetch rutine
 -  The Screen contains the application screens and components basically tsx files etc,
 -  The Application contains the redux files.
+- The next step was creating and bring components together to form the various screens.
 
 ## Tech Stack
 
