@@ -18,9 +18,6 @@ const loadNewsFlow:any= ({ dispatch }) => (next)=>
                 }
             }
         }
-
-
-
 type Data=()=>{}
 const data:Array<Data> = [
     loadNewsFlow

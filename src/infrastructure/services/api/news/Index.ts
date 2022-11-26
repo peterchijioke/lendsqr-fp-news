@@ -4,16 +4,13 @@ import perf from '@react-native-firebase/perf';
 
  const url = Config.base_url+'search_free?'
    const GetNewsApi= async () => {
-
                       // Define the network metric
                     const metric = await perf().newHttpMetric(url, 'GET');
 
                     // Define meta details
                     metric.putAttribute('News', 'All News');
-
                     // Start the metric
                     await metric.start();
-
                               let params = new URLSearchParams({q: 'Elon Musk', lang: 'en', media: 'True'})
                              try {
                                const response:any = await fetch(url+ params,{
